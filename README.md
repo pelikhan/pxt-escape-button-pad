@@ -1,17 +1,9 @@
 # pxt-escape-button-pad ![Build status badge](https://github.com/pelikhan/pxt-escape-button-pad/workflows/MakeCode/badge.svg)
 
+This program sends code dialed from pressing buttons A/B
+used in the [escape](https://github.com/pelikhan/pxt-escape) system.
 
-
-## Use this extension
-
-This repository can be added as an **extension** in MakeCode.
-
-* open https://makecode.microbit.org/
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for the URL of this repository and import
-
-## Edit this extension
+## Edit this project
 
 To edit this repository in MakeCode.
 
@@ -19,16 +11,8 @@ To edit this repository in MakeCode.
 * click on **Import** then click on **Import URL**
 * paste the repository URL and click import
 
-## Blocks preview
-
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
-
-![A rendered view of the blocks](https://github.com/pelikhan/pxt-escape-button-pad/raw/master/.makecode/blocks.png)
-
 ## Supported targets
 
-* for PXT/microbit
 * for PXT/microbit
 (The metadata above is needed for package search.)
 
