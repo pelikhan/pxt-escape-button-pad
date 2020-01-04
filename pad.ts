@@ -4,10 +4,7 @@ let idleCount = 0;
 
 function sendCode() {
     idleCount = 0;
-    for(let i = 0; i < 2; ++i) {
-        escape.broadcastMessageNumber(escape.CODE, codeNumber);    
-        basic.pause(5);
-    }
+    escape.broadcastCodeMessage(codeNumber);
 }
 
 input.onButtonPressed(Button.A, function () {
