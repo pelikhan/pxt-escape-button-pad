@@ -1,30 +1,25 @@
 let codeString = "-";
-let codeNumber = 1;
-let idleCount = 0;
+let lastIdle = 0;
 
 function sendCode() {
-    idleCount = 0;
+    lastIdle = input.runningTime();
+    const codeNumber = escape.fromAB(codeString);
     escape.broadcastCodeMessage(codeNumber);
 }
 
 input.onButtonPressed(Button.A, function () {
-    codeString = "A";
-    codeNumber = (codeNumber << 1) | 0;
+    codeString += "A";
     sendCode();
 })
 input.onButtonPressed(Button.B, function () {
-    codeString = "B";
-    codeNumber = (codeNumber << 1) | 1;    
+    codeString += "B";
     sendCode();
 })
 
 // display loop
 escape.onUpdate(function () {
-    idleCount++;
-    if (idleCount > 20) {
+    if (input.runningTime() - lastIdle > 2000) {
         codeString = "-";
-        codeNumber = 0;
     }
-    led.stopAnimation()
-    basic.showString(codeString);
+    basic.showString(codeString[codeString.length - 1]);
 })
